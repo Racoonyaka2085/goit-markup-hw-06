@@ -397,6 +397,18 @@
                     </li>
                 </ul>
             </div>
+            <div class="submit-link">
+                <form action="#">
+                    <label for="submit" class="submit-text">Подпишитесь на рассылку</label>
+                    <input type="text" name="submit" id="submit" placeholder="Email" class="submit-input">
+                </form>
+                <div class="submit-icon-picture">
+                    <button type="submit" class="button-submit"><span class="submit-text">Подписаться</span></button>
+                    <svg class="submit-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-icon-send"></use>
+                </svg>
+                </div>
+            </div>
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -404,6 +416,45 @@
             <button type="button" class="modal-close" data-modal-close><svg class="modal-icon">
                 <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
             </svg></button>
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+            <form action="#" class="modal-form">
+                <div class="form-field">
+                    <label for="user-name" class="form-label">Имя</label>
+                    <div class="input-count">
+                        <input type="text" name="user-name" class="modal-input" placeholder="Ваше имя" required minlength="2" id="user-name">
+                        <svg class="input-icon" width="18" height="18">
+                        <use href="images/icons.svg#icon-person-black-18dp-1"></use>
+                    </svg>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="user-tel" class="form-label">Телефон</label>
+                    <div class="input-count">
+                        <input type="tel" name="user-tel" class="modal-input" placeholder="Ваш телефон" required pattern="[\+]\d{3}[\(]\d{2}[\)]\d{3}[\-]\d{2}[\-]\d{2}" title="+380(98)111-11-11" id="user-tel">
+                        <svg class="input-icon" width="18" height="18">
+                            <use href="images/icons.svg#icon-phone-black-18dp-1"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="user-mail" class="form-label">Почта</label>
+                    <div class="input-count">
+                        <input type="email" name="user-mail" class="modal-input" placeholder="Ваша почта" required id="user-mail">
+                        <svg class="input-icon" width="18" height="18">
+                            <use href="images/icons.svg#icon-email-black-18dp-1"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="user-text" class="form-label">Комментарий</label>
+                    <textarea name="user-text" id="user-text" placeholder="Введите текст" class="modal-textarea"></textarea>
+                </div>
+                <div class="form-field">
+                    <input type="checkbox" name="input-check" id="input-check" class="policy-check visually-hidden">
+                    <label for="input-check" class="policy-text">Соглашаюсь с рассылкой и принимаю <a class="policy">Условия договора</a></label>
+                </div>
+                <button type="submit" class="btn"><span class="btn-text">Отправить</span></button>
+            </form>
         </div>
     </div>
     <script src="./modal.js"></script>
