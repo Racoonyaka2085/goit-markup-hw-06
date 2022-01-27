@@ -933,6 +933,10 @@ footer {
     transform: translateY(-50%);
 }
 
+.input-icon:hover {
+    fill: #2196F3;
+}
+
 .modal-input::placeholder {
     font-size: 14px;
     line-height: 1.14;
@@ -977,7 +981,31 @@ footer {
     cursor: pointer;
 }
 
-.modal-textarea:hover {
+#user-name:hover+.input-icon,
+#user-name:focus+.input-icon,
+#user-tel:hover+.input-icon,
+#user-tel:focus+.input-icon,
+#user-mail:hover+.input-icon,
+#user-mail:focus+.input-icon {
+    fill: #2196F3
+}
+
+#user-name+.input-icon,
+#user-tel+.input-icon,
+#user-mail+.input-icon,
+#user-name,
+#user-tel,
+#user-mail {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:hover,
+#user-name:hover,
+#user-name:focus,
+#user-tel:hover,
+#user-tel:focus,
+#user-mail:hover,
+#user-mail:focus {
     border-color: #2196F3;
 }
 
